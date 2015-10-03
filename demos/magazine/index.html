@@ -1,6 +1,7 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
+	<meta charset="UTF-8">
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="../../turn.min.js"></script>
 
@@ -16,12 +17,39 @@ body{
 	background-color:#ccc;
 	background-size:100% 100%;
 }
+#pages{
+	background: url("pages/blank.jpg") no-repeat;
+
+}
+#pages div {
+	padding: 60px 25px;
+	line-height: 1.4em;
+	text-align: justify;
+}
 </style>
 </head>
 <body>
 
 <div id="magazine">
-	<div style="background-image:url(pages/01.jpg);"></div>
+	<div id="pages">
+		<div>
+			<H1>新營國小雜誌</H1>
+		</div>
+	</div>
+
+	<div  id="pages" >
+		<div>
+		<img src ='http://web.syps.tn.edu.tw/xoops/uploads/tad_themes/sailing/slide/slide_3_12.jpg' width='500'>page1
+		</div>
+	</div>
+		
+
+	<div style="background-image:url(pages/01.jpg);"> </div>
+
+
+
+
+
 	<div style="background-image:url(pages/02.jpg);"></div>
 	<div style="background-image:url(pages/03.jpg);"></div>
 	<div style="background-image:url(pages/04.jpg);"></div>
@@ -45,15 +73,15 @@ body{
 							}
 						});
 	});
-	
-	
+
+
 	$(window).bind('keydown', function(e){
-		
+
 		if (e.keyCode==37)
 			$('#magazine').turn('previous');
 		else if (e.keyCode==39)
 			$('#magazine').turn('next');
-			
+
 	});
 
 </script>
